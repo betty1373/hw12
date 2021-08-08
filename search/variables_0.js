@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['algo_117',['algo',['../struct_options.html#a2ab9da0ca3c6f746a38e5530eeeaeb22',1,'Options']]]
+  ['algo_120',['algo',['../struct_options.html#a2ab9da0ca3c6f746a38e5530eeeaeb22',1,'Options']]]
 ];
