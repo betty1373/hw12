@@ -1,2 +1,2 @@
-# work7  bayan
-[Документация](https://betty1373.github.io/hw8/)
+# work11  map_reduce
+[Документация](https://betty1373.github.io/hw11/)
