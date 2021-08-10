@@ -1,5 +1,10 @@
 #include "../inc/Split.h"
+#include "../inc/Shuffle.h"
+#include "../inc/Map.h"
+
+
 #include "iostream"
+#include <sstream>
 
 /// @file
 /// @brief Main function. Find dublicate files.
@@ -21,8 +26,46 @@ int main(int argc, char** argv) {
     }
     (void) reduce_threads;
 
-    Split split(file_name,map_threads);
-    auto sections = split.Work();
+    Split splitter(file_name,map_threads);
+    auto sections = splitter.Work();
+
+	Map mapper(file_name);
+	auto mapped = mapper.Work(sections,
+			[&map = mapper]( std::ifstream &file, 
+                                std::ifstream::pos_type beg_pos,
+                                std::ifstream::pos_type end_pos,
+                                std::shared_ptr<std::vector<std::string>> container) {
+			std::size_t sizeBuffer =  end_pos - beg_pos;
+			std::string buffer;
+			buffer.resize(sizeBuffer);
+
+			try
+			{
+				std::lock_guard<std::mutex> lk(map.mMutex);
+				file.seekg(beg_pos,std::ios::beg);
+				file.read(buffer.data(),sizeBuffer);
+			}
+			catch(const std::exception& e)
+			{
+				std::cerr << e.what() << '\n';
+			}
+			
+			std::stringstream stream(buffer);
+			std::string str;
+			std::cout<<" part "<<beg_pos<<"-"<<end_pos<<"-"<<stream.str()<<std::endl;
+
+			while (std::getline(stream,str,'\n')) {
+				for (std::size_t i = 1; i < str.length(); i++) {
+					std::cout<< str.substr(0, i)<<std::endl;
+            		container->push_back(str.substr(0, i));
+          		}
+			}
+		});
+	Shuffle shuffler;
+    auto merged = shuffler.Work(mapped);
+    for (auto &merge :  merged) {
+        std::cout<< merge<<std::endl;
+    }
   //  Options_Parser options_parser;
   //  auto options = options_parser.Parse(argc, argv);
   //  if (!options)

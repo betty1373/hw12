@@ -6,5 +6,5 @@
 template <typename T> struct Task {
     std::shared_ptr<std::thread> task;
     T taskResult;
-}
+};
 #endif

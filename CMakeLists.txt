@@ -5,15 +5,7 @@ if (NOT DEFINED ENV{GITHUB_RUN_NUMBER})
 endif()
 project(map_reduce VERSION 0.0.$ENV{GITHUB_RUN_NUMBER})
 
-find_package(Boost COMPONENTS program_options filesystem regex REQUIRED)
-set(Boost_USE_STATIC_LIBS OFF)
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
-
-find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
-
-include_directories(${Boost_INCLUDE_DIRS})
 
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 
@@ -27,7 +19,9 @@ set_target_properties(map_reduce PROPERTIES
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wall;-Wextra;-pedantic;-Werror"
 )
-target_link_libraries(map_reduce PRIVATE ${Boost_LIBRARIES})
+target_link_libraries(map_reduce PRIVATE 
+    ${CMAKE_THREAD_LIBS_INIT}
+)
 
 install(TARGETS map_reduce RUNTIME DESTINATION bin)
 
