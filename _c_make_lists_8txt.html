@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bayan: CMakeLists.txt File Reference</title>
+<title>map_reduce: CMakeLists.txt File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bayan
+   <div id="projectname">map_reduce
    </div>
    <div id="projectbrief">otus hw7</div>
   </td>
@@ -75,10 +75,16 @@ Functions</h2></td></tr>
 <tr class="separator:a8d79dde94567b730c2e3ea0f264270c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae40d498fcf9a58901e9d443c91454ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#aae40d498fcf9a58901e9d443c91454ca">set</a> (ENV{GITHUB_RUN_NUMBER} 1) endif() project(map_reduce VERSION 0.0. $ENV</td></tr>
 <tr class="separator:aae40d498fcf9a58901e9d443c91454ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac679401e5766f1a67ac291b3bfeaafb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#ac679401e5766f1a67ac291b3bfeaafb0">find_package</a> (Boost COMPONENTS program_options filesystem regex REQUIRED) <a class="el" href="_c_make_lists_8txt.html#aae40d498fcf9a58901e9d443c91454ca">set</a>(Boost_USE_STATIC_LIBS OFF) <a class="el" href="_c_make_lists_8txt.html#aae40d498fcf9a58901e9d443c91454ca">set</a>(Boost_USE_MULTITHREADED ON) <a class="el" href="_c_make_lists_8txt.html#aae40d498fcf9a58901e9d443c91454ca">set</a>(Boost_USE_STATIC_RUNTIME OFF) find_package(GTest REQUIRED) find_package(Threads REQUIRED) include_directories($</td></tr>
-<tr class="separator:ac679401e5766f1a67ac291b3bfeaafb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3029ed34c7e95c2ba044459bfcc2cd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#af3029ed34c7e95c2ba044459bfcc2cd0">configure_file</a> (version.h.in ${PROJECT_SOURCE_DIR}/version.h) file(GLOB TARGET_SRC &quot;$</td></tr>
-<tr class="separator:af3029ed34c7e95c2ba044459bfcc2cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445c647ce87fac03189795f08bf3a1ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a445c647ce87fac03189795f08bf3a1ca">find_package</a> (Threads REQUIRED) configure_file(version.h.in $</td></tr>
+<tr class="separator:a445c647ce87fac03189795f08bf3a1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67985e53848ac2ffe346d257d6eeb4f"><td class="memItemLeft" align="right" valign="top">version h&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#ad67985e53848ac2ffe346d257d6eeb4f">file</a> (GLOB TARGET_SRC &quot;${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp&quot; &quot;${CMAKE_CURRENT_SOURCE_DIR}/inc/*.h&quot;) add_executable(map_reduce $</td></tr>
+<tr class="separator:ad67985e53848ac2ffe346d257d6eeb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ee545e0da1327d12106bc568c13336"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#af3ee545e0da1327d12106bc568c13336">set_target_properties</a> (map_reduce PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON COMPILE_OPTIONS &quot;-Wall;-Wextra;-pedantic;-Werror&quot;) target_link_libraries(map_reduce PRIVATE $</td></tr>
+<tr class="separator:af3ee545e0da1327d12106bc568c13336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f4a4debf5cd48d99eb2dce0a2a8b79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#af4f4a4debf5cd48d99eb2dce0a2a8b79">install</a> (TARGETS map_reduce RUNTIME DESTINATION bin) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CPACK_GENERATOR DEB) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CPACK_PACKAGE_VERSION_MAJOR &quot;$</td></tr>
+<tr class="separator:af4f4a4debf5cd48d99eb2dce0a2a8b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9267ccdfbbaf6ba4f55c35f3a1f7fd90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a> (CPACK_PACKAGE_VERSION_MINOR &quot;${PROJECT_VERSION_MINOR}&quot;) set(CPACK_PACKAGE_VERSION_PATCH &quot;$</td></tr>
+<tr class="separator:a9267ccdfbbaf6ba4f55c35f3a1f7fd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8d79dde94567b730c2e3ea0f264270c2"></a>
@@ -99,17 +105,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af3029ed34c7e95c2ba044459bfcc2cd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3029ed34c7e95c2ba044459bfcc2cd0">&#9670;&nbsp;</a></span>configure_file()</h2>
+<a id="ad67985e53848ac2ffe346d257d6eeb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67985e53848ac2ffe346d257d6eeb4f">&#9670;&nbsp;</a></span>file()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">configure_file </td>
+          <td class="memname">version h file </td>
           <td>(</td>
-          <td class="paramtype">version.h.in ${PROJECT_SOURCE_DIR}/version.&#160;</td>
-          <td class="paramname"><em>h</em></td><td>)</td>
+          <td class="paramtype">GLOB TARGET_SRC &quot;${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp&quot; &quot;${CMAKE_CURRENT_SOURCE_DIR}/inc/*.h&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -117,8 +123,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac679401e5766f1a67ac291b3bfeaafb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac679401e5766f1a67ac291b3bfeaafb0">&#9670;&nbsp;</a></span>find_package()</h2>
+<a id="a445c647ce87fac03189795f08bf3a1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445c647ce87fac03189795f08bf3a1ca">&#9670;&nbsp;</a></span>find_package()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +132,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">find_package </td>
           <td>(</td>
-          <td class="paramtype">Boost COMPONENTS program_options filesystem regex&#160;</td>
+          <td class="paramtype">Threads&#160;</td>
           <td class="paramname"><em>REQUIRED</em></td><td>)</td>
           <td></td>
         </tr>
@@ -135,8 +141,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af4f4a4debf5cd48d99eb2dce0a2a8b79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f4a4debf5cd48d99eb2dce0a2a8b79">&#9670;&nbsp;</a></span>install()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">install </td>
+          <td>(</td>
+          <td class="paramtype">TARGETS map_reduce RUNTIME DESTINATION&#160;</td>
+          <td class="paramname"><em>bin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9267ccdfbbaf6ba4f55c35f3a1f7fd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set </td>
+          <td>(</td>
+          <td class="paramtype">CPACK_PACKAGE_VERSION_MINOR &quot;${PROJECT_VERSION_MINOR}&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aae40d498fcf9a58901e9d443c91454ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae40d498fcf9a58901e9d443c91454ca">&#9670;&nbsp;</a></span>set()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aae40d498fcf9a58901e9d443c91454ca">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,6 +188,24 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">ENV{GITHUB_RUN_NUMBER}&#160;</td>
           <td class="paramname"><em>1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3ee545e0da1327d12106bc568c13336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ee545e0da1327d12106bc568c13336">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_target_properties </td>
+          <td>(</td>
+          <td class="paramtype">map_reduce PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON COMPILE_OPTIONS &quot;-Wall;-Wextra;-pedantic;-Werror&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['excludefilter_16',['ExcludeFilter',['../class_exclude_filter.html',1,'ExcludeFilter'],['../class_exclude_filter.html#af45140a1bd039739d552885dc1a56f53',1,'ExcludeFilter::ExcludeFilter()']]],
-  ['excpaths_17',['excPaths',['../struct_options.html#a5f7d76b444e7fc4caaa4c3d6fb56c96a',1,'Options']]]
+  ['hex_14',['HEX',['../_c_make_c_compiler_id_8c.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCXXCompilerId.cpp']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['depth_122',['depth',['../struct_options.html#a6cb435905db661ea9913fcdc9673fbdf',1,'Options']]]
+  ['task_100',['task',['../struct_task.html#a21d4f1ee5badfdf6fbca1d7934bca17b',1,'Task']]],
+  ['taskresult_101',['taskResult',['../struct_task.html#a563e393575ed3bae03758e3d2f525a6f',1,'Task']]]
 ];

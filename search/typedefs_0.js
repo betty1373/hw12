@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hashfunc_5ft_131',['HashFunc_t',['../_file_scanner_8h.html#afc52e495a4aff5280162e538e586c476',1,'FileScanner.h']]]
+  ['fnctoreduce_102',['fncToReduce',['../class_reduce.html#aa9ee31ca9d450fbbd733113c62e06d6c',1,'Reduce']]]
 ];

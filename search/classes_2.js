@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['filescanner_70',['FileScanner',['../class_file_scanner.html',1,'']]],
-  ['filter_71',['Filter',['../class_filter.html',1,'']]]
+  ['shuffle_58',['Shuffle',['../struct_shuffle.html',1,'']]],
+  ['split_59',['Split',['../class_split.html',1,'']]]
 ];

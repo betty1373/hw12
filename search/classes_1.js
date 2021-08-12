@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['excludefilter_69',['ExcludeFilter',['../class_exclude_filter.html',1,'']]]
+  ['reduce_57',['Reduce',['../class_reduce.html',1,'']]]
 ];

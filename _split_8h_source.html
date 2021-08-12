@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bayan: inc/Split.h Source File</title>
+<title>map_reduce: inc/Split.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bayan
+   <div id="projectname">map_reduce
    </div>
    <div id="projectbrief">otus hw7</div>
   </td>
@@ -77,17 +77,17 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_split.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_split.html">Split</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_split.html#a78c7b4dedf1b42a5e994a798d632cefa">Split</a>(std::string fileName,std::size_t maspThreads);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_split.html">Split</a>(std::string fileName,std::size_t numThreads);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    std::vector&lt;std::iostream::pos_type&gt; <a class="code" href="class_split.html#aad01a5e1a04029be4ed5fb7a90b41a06">Work</a>();</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    std::vector&lt;std::iostream::pos_type&gt; GetSections(<span class="keywordtype">long</span> sectionSize,<span class="keywordtype">long</span> fileEndPos);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::ifstream m_file;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::size_t m_mapThreads;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_split.html">Split</a>()=<span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::vector&lt;std::iostream::pos_type&gt; GetSections(<span class="keywordtype">long</span> sectionSize,<span class="keywordtype">long</span> end_pos);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::ifstream m_file;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::size_t m_Threads;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_split_html"><div class="ttname"><a href="class_split.html">Split</a></div><div class="ttdef"><b>Definition:</b> Split.h:6</div></div>
-<div class="ttc" id="aclass_split_html_a78c7b4dedf1b42a5e994a798d632cefa"><div class="ttname"><a href="class_split.html#a78c7b4dedf1b42a5e994a798d632cefa">Split::Split</a></div><div class="ttdeci">Split(std::string fileName, std::size_t maspThreads)</div><div class="ttdef"><b>Definition:</b> Split.cpp:3</div></div>
 <div class="ttc" id="aclass_split_html_aad01a5e1a04029be4ed5fb7a90b41a06"><div class="ttname"><a href="class_split.html#aad01a5e1a04029be4ed5fb7a90b41a06">Split::Work</a></div><div class="ttdeci">std::vector&lt; std::iostream::pos_type &gt; Work()</div><div class="ttdef"><b>Definition:</b> Split.cpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
