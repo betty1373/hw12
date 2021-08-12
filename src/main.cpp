@@ -2,7 +2,7 @@
 #include "../inc/Shuffle.h"
 #include "../inc/Map.h"
 
-
+#include "../inc/Reduce.h"
 #include "iostream"
 #include <sstream>
 
@@ -66,21 +66,31 @@ int main(int argc, char** argv) {
     for (auto &merge :  merged) {
         std::cout<< merge<<std::endl;
     }
-  //  Options_Parser options_parser;
-  //  auto options = options_parser.Parse(argc, argv);
-  //  if (!options)
-  //     return 0;
- 
-  // PathFinder pathFinder(options.get().excPaths, options.get().depth, options.get().masks, options.get().minSize);
-  // auto groupPath = pathFinder.FindPaths(options.get().incPaths);
-  // FileScanner fileScanner(options.get().block, options.get().algo);  
-  // auto duplicates = fileScanner.Scan(groupPath);
+	Reduce reducer(merged,reduce_threads);
+    
+ 	reducer.Work([](std::shared_ptr<std::vector<std::string>> &data,
+                    [[maybe_unused]] std::shared_ptr<std::ofstream> stream) {
+    // Find minimal prefix
+    if (data->empty())
+      return;
 
-  // for (auto& dup : duplicates) {
-  //   for (auto& path : dup) {
-  //     std::cout << path << std::endl;
-  //   }
-  //   std::cout << std::endl;
-  // }
-   return 0;
+    size_t prefSize = 1;
+    std::string current("");
+
+    for (auto &prefix : *data) {
+      *stream << prefix << std::endl;
+
+      if (prefSize <= prefix.length()) {
+        if (current == prefix) {
+          prefSize = prefix.length() + 1;
+        } else {
+          current = prefix;
+        }
+      }
+    }
+
+    std::string output = "Prefix length = '" + std::to_string(prefSize) + "'";
+    std::cout << output << std::endl;
+  });
+    return 0;
 }  

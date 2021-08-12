@@ -5,13 +5,13 @@
 
 class Split {
 public:
-    Split(std::string fileName,std::size_t mapThreads);
+    Split(std::string fileName,std::size_t numThreads);
     std::vector<std::iostream::pos_type> Work();
 
 private:
     Split()=delete;
-    std::vector<std::iostream::pos_type> GetSections(long sectionSize,long fileEndPos);
+    std::vector<std::iostream::pos_type> GetSections(long sectionSize,long end_pos);
     std::ifstream m_file;
-    std::size_t m_mapThreads;
+    std::size_t m_Threads;
 };
 #endif
