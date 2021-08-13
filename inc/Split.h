@@ -6,7 +6,6 @@ class Split {
 public:
     Split(std::string fileName,std::size_t numThreads);
     std::vector<FilePos> Work();
-
 private:
     Split()=delete;
     std::vector<FilePos> GetSections(long sectionSize,long end_pos);
