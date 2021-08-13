@@ -77,15 +77,20 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_task.html">    9</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="struct_task.html">Task</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_task.html#a21d4f1ee5badfdf6fbca1d7934bca17b">   10</a></span>&#160;    std::shared_ptr&lt;std::thread&gt; <a class="code" href="struct_task.html#a21d4f1ee5badfdf6fbca1d7934bca17b">task</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_task.html#a563e393575ed3bae03758e3d2f525a6f">   11</a></span>&#160;    T <a class="code" href="struct_task.html#a563e393575ed3bae03758e3d2f525a6f">taskResult</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astruct_task_html"><div class="ttname"><a href="struct_task.html">Task</a></div><div class="ttdef"><b>Definition:</b> Task.h:9</div></div>
-<div class="ttc" id="astruct_task_html_a21d4f1ee5badfdf6fbca1d7934bca17b"><div class="ttname"><a href="struct_task.html#a21d4f1ee5badfdf6fbca1d7934bca17b">Task::task</a></div><div class="ttdeci">std::shared_ptr&lt; std::thread &gt; task</div><div class="ttdef"><b>Definition:</b> Task.h:10</div></div>
-<div class="ttc" id="astruct_task_html_a563e393575ed3bae03758e3d2f525a6f"><div class="ttname"><a href="struct_task.html#a563e393575ed3bae03758e3d2f525a6f">Task::taskResult</a></div><div class="ttdeci">T taskResult</div><div class="ttdef"><b>Definition:</b> Task.h:11</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">   10</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a> = std::vector&lt;std::string&gt;;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">   11</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a> = std::ifstream::pos_type;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_task.html">   12</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="struct_task.html">Task</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_task.html#a21d4f1ee5badfdf6fbca1d7934bca17b">   13</a></span>&#160;    std::shared_ptr&lt;std::thread&gt; <a class="code" href="struct_task.html#a21d4f1ee5badfdf6fbca1d7934bca17b">task</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_task.html#a563e393575ed3bae03758e3d2f525a6f">   14</a></span>&#160;    T <a class="code" href="struct_task.html#a563e393575ed3bae03758e3d2f525a6f">taskResult</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_task_8h_html_a15212fc73ae32382d56f713e993a188a"><div class="ttname"><a href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a></div><div class="ttdeci">std::vector&lt; std::string &gt; VectorStr</div><div class="ttdef"><b>Definition:</b> Task.h:10</div></div>
+<div class="ttc" id="a_task_8h_html_a82082717c98b3afd4703c72fbe53fd01"><div class="ttname"><a href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a></div><div class="ttdeci">std::ifstream::pos_type FilePos</div><div class="ttdef"><b>Definition:</b> Task.h:11</div></div>
+<div class="ttc" id="astruct_task_html"><div class="ttname"><a href="struct_task.html">Task</a></div><div class="ttdef"><b>Definition:</b> Task.h:12</div></div>
+<div class="ttc" id="astruct_task_html_a21d4f1ee5badfdf6fbca1d7934bca17b"><div class="ttname"><a href="struct_task.html#a21d4f1ee5badfdf6fbca1d7934bca17b">Task::task</a></div><div class="ttdeci">std::shared_ptr&lt; std::thread &gt; task</div><div class="ttdef"><b>Definition:</b> Task.h:13</div></div>
+<div class="ttc" id="astruct_task_html_a563e393575ed3bae03758e3d2f525a6f"><div class="ttname"><a href="struct_task.html#a563e393575ed3bae03758e3d2f525a6f">Task::taskResult</a></div><div class="ttdeci">T taskResult</div><div class="ttdef"><b>Definition:</b> Task.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

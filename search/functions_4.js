@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reduce_90',['Reduce',['../class_reduce.html#a0a990606328e806c43be43db108870a5',1,'Reduce']]]
+  ['reduce_92',['Reduce',['../class_reduce.html#a59ff9fa72bacc395698e04a78873f1b3',1,'Reduce']]]
 ];

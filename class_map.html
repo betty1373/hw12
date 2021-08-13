@@ -71,21 +71,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class put file sections to numMaps sorted containers.  
+ <a href="class_map.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_map_8h_source.html">Map.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abb2e3d32a6bfdf2c5bd7091192b30bf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#abb2e3d32a6bfdf2c5bd7091192b30bf3">Map</a> (std::string fileName)</td></tr>
 <tr class="separator:abb2e3d32a6bfdf2c5bd7091192b30bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b71d4ae93b9bd0bab4897342d48d592"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a2b71d4ae93b9bd0bab4897342d48d592">Work</a> (std::vector&lt; std::ifstream::pos_type &gt; sections, std::function&lt; void(std::ifstream &amp;<a class="el" href="_c_make_lists_8txt.html#ad67985e53848ac2ffe346d257d6eeb4f">file</a>, std::ifstream::pos_type beg_pos, std::ifstream::pos_type end_pos, std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt; container)&gt; map_func)</td></tr>
-<tr class="separator:a2b71d4ae93b9bd0bab4897342d48d592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d43329cf68d860702113cb6245c754"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aa5d43329cf68d860702113cb6245c754">Work</a> (std::vector&lt; <a class="el" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a> &gt; sections, std::function&lt; void(std::ifstream &amp;<a class="el" href="_c_make_lists_8txt.html#ad67985e53848ac2ffe346d257d6eeb4f">file</a>, <a class="el" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a> beg_pos, <a class="el" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a> end_pos, std::shared_ptr&lt; <a class="el" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a> &gt; vectorStr)&gt; map_func)</td></tr>
+<tr class="separator:aa5d43329cf68d860702113cb6245c754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a066410daafa01a180c5fec164cfaaada"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a066410daafa01a180c5fec164cfaaada">mMutex</a></td></tr>
-<tr class="separator:a066410daafa01a180c5fec164cfaaada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1252a327ad42f5c2908a126c3e3a0d"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aff1252a327ad42f5c2908a126c3e3a0d">m_Mutex</a></td></tr>
+<tr class="separator:aff1252a327ad42f5c2908a126c3e3a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class put file sections to numMaps sorted containers. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb2e3d32a6bfdf2c5bd7091192b30bf3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb2e3d32a6bfdf2c5bd7091192b30bf3">&#9670;&nbsp;</a></span>Map()</h2>
 
@@ -105,22 +110,22 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2b71d4ae93b9bd0bab4897342d48d592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b71d4ae93b9bd0bab4897342d48d592">&#9670;&nbsp;</a></span>Work()</h2>
+<a id="aa5d43329cf68d860702113cb6245c754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d43329cf68d860702113cb6245c754">&#9670;&nbsp;</a></span>Work()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt; &gt; Map::Work </td>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a> &gt; &gt; Map::Work </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::ifstream::pos_type &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a> &gt;&#160;</td>
           <td class="paramname"><em>sections</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::function&lt; void(std::ifstream &amp;<a class="el" href="_c_make_lists_8txt.html#ad67985e53848ac2ffe346d257d6eeb4f">file</a>, std::ifstream::pos_type beg_pos, std::ifstream::pos_type end_pos, std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt; container)&gt;&#160;</td>
+          <td class="paramtype">std::function&lt; void(std::ifstream &amp;<a class="el" href="_c_make_lists_8txt.html#ad67985e53848ac2ffe346d257d6eeb4f">file</a>, <a class="el" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a> beg_pos, <a class="el" href="_task_8h.html#a82082717c98b3afd4703c72fbe53fd01">FilePos</a> end_pos, std::shared_ptr&lt; <a class="el" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a> &gt; vectorStr)&gt;&#160;</td>
           <td class="paramname"><em>map_func</em>&#160;</td>
         </tr>
         <tr>
@@ -134,14 +139,14 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a066410daafa01a180c5fec164cfaaada"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a066410daafa01a180c5fec164cfaaada">&#9670;&nbsp;</a></span>mMutex</h2>
+<a id="aff1252a327ad42f5c2908a126c3e3a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1252a327ad42f5c2908a126c3e3a0d">&#9670;&nbsp;</a></span>m_Mutex</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::mutex Map::mMutex</td>
+          <td class="memname">std::mutex Map::m_Mutex</td>
         </tr>
       </table>
 </div><div class="memdoc">

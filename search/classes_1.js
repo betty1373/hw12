@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reduce_57',['Reduce',['../class_reduce.html',1,'']]]
+  ['reduce_59',['Reduce',['../class_reduce.html',1,'']]]
 ];

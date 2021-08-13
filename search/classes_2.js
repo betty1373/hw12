@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['shuffle_58',['Shuffle',['../struct_shuffle.html',1,'']]],
-  ['split_59',['Split',['../class_split.html',1,'']]]
+  ['shuffle_60',['Shuffle',['../class_shuffle.html',1,'']]],
+  ['split_61',['Split',['../class_split.html',1,'']]]
 ];

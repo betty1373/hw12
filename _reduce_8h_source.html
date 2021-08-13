@@ -72,29 +72,25 @@ $(function() {
 <div class="contents">
 <a href="_reduce_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef Reduce_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define Reduce_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_task_8h.html">Task.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_reduce.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_reduce.html">Reduce</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_reduce.html#aa9ee31ca9d450fbbd733113c62e06d6c">   11</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="class_reduce.html#aa9ee31ca9d450fbbd733113c62e06d6c">fncToReduce</a> = std::function&lt;void(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt; &amp;data,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                    std::shared_ptr&lt;std::ofstream&gt; out)&gt;;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_reduce.html#a0a990606328e806c43be43db108870a5">   13</a></span>&#160;    <a class="code" href="class_reduce.html#a0a990606328e806c43be43db108870a5">Reduce</a>(std::vector&lt;std::string&gt; data,std::size_t numThreads);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_reduce.html#aa61307fe1687c5dc84947bea6311d555">Work</a>(<a class="code" href="class_reduce.html#aa9ee31ca9d450fbbd733113c62e06d6c">fncToReduce</a> reduce_func);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_reduce.html">Reduce</a>() =  <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::vector&lt;std::string&gt; m_data;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::size_t m_Threads;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_task_8h.html">Task.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_reduce.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_reduce.html">Reduce</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_reduce.html#ad107c7689571ad86063e72b69fcf9565">    7</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="class_reduce.html#ad107c7689571ad86063e72b69fcf9565">fncToReduce</a> = std::function&lt;void(std::shared_ptr&lt;VectorStr&gt; &amp;data,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                    std::shared_ptr&lt;std::ofstream&gt; out)&gt;;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_reduce.html#a59ff9fa72bacc395698e04a78873f1b3">    9</a></span>&#160;    <a class="code" href="class_reduce.html#a59ff9fa72bacc395698e04a78873f1b3">Reduce</a>(<a class="code" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a> data,std::size_t numThreads);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_reduce.html#aa61307fe1687c5dc84947bea6311d555">Work</a>(<a class="code" href="class_reduce.html#ad107c7689571ad86063e72b69fcf9565">fncToReduce</a> reduce_func);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_reduce.html">Reduce</a>() =  <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a> m_data;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::size_t m_Threads;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_task_8h_html"><div class="ttname"><a href="_task_8h.html">Task.h</a></div></div>
-<div class="ttc" id="aclass_reduce_html"><div class="ttname"><a href="class_reduce.html">Reduce</a></div><div class="ttdef"><b>Definition:</b> Reduce.h:9</div></div>
-<div class="ttc" id="aclass_reduce_html_a0a990606328e806c43be43db108870a5"><div class="ttname"><a href="class_reduce.html#a0a990606328e806c43be43db108870a5">Reduce::Reduce</a></div><div class="ttdeci">Reduce(std::vector&lt; std::string &gt; data, std::size_t numThreads)</div></div>
-<div class="ttc" id="aclass_reduce_html_aa61307fe1687c5dc84947bea6311d555"><div class="ttname"><a href="class_reduce.html#aa61307fe1687c5dc84947bea6311d555">Reduce::Work</a></div><div class="ttdeci">void Work(fncToReduce reduce_func)</div><div class="ttdef"><b>Definition:</b> Reduce.cpp:9</div></div>
-<div class="ttc" id="aclass_reduce_html_aa9ee31ca9d450fbbd733113c62e06d6c"><div class="ttname"><a href="class_reduce.html#aa9ee31ca9d450fbbd733113c62e06d6c">Reduce::fncToReduce</a></div><div class="ttdeci">std::function&lt; void(std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt; &amp;data, std::shared_ptr&lt; std::ofstream &gt; out)&gt; fncToReduce</div><div class="ttdef"><b>Definition:</b> Reduce.h:12</div></div>
+<div class="ttc" id="a_task_8h_html_a15212fc73ae32382d56f713e993a188a"><div class="ttname"><a href="_task_8h.html#a15212fc73ae32382d56f713e993a188a">VectorStr</a></div><div class="ttdeci">std::vector&lt; std::string &gt; VectorStr</div><div class="ttdef"><b>Definition:</b> Task.h:10</div></div>
+<div class="ttc" id="aclass_reduce_html"><div class="ttname"><a href="class_reduce.html">Reduce</a></div><div class="ttdoc">Class put to one sorted vector to reduceNums threads to find minimal prefix.</div><div class="ttdef"><b>Definition:</b> Reduce.h:5</div></div>
+<div class="ttc" id="aclass_reduce_html_a59ff9fa72bacc395698e04a78873f1b3"><div class="ttname"><a href="class_reduce.html#a59ff9fa72bacc395698e04a78873f1b3">Reduce::Reduce</a></div><div class="ttdeci">Reduce(VectorStr data, std::size_t numThreads)</div></div>
+<div class="ttc" id="aclass_reduce_html_aa61307fe1687c5dc84947bea6311d555"><div class="ttname"><a href="class_reduce.html#aa61307fe1687c5dc84947bea6311d555">Reduce::Work</a></div><div class="ttdeci">void Work(fncToReduce reduce_func)</div><div class="ttdef"><b>Definition:</b> Reduce.cpp:8</div></div>
+<div class="ttc" id="aclass_reduce_html_ad107c7689571ad86063e72b69fcf9565"><div class="ttname"><a href="class_reduce.html#ad107c7689571ad86063e72b69fcf9565">Reduce::fncToReduce</a></div><div class="ttdeci">std::function&lt; void(std::shared_ptr&lt; VectorStr &gt; &amp;data, std::shared_ptr&lt; std::ofstream &gt; out)&gt; fncToReduce</div><div class="ttdef"><b>Definition:</b> Reduce.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
